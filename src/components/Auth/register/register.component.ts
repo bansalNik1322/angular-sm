@@ -1,6 +1,5 @@
-import { Component, forwardRef } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, NG_VALUE_ACCESSOR, NgForm } from '@angular/forms'; // For ngModel
+import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms'; // For ngModel
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
@@ -18,11 +17,9 @@ import { PasswordComponent } from '../../Common/password/password.component';
     PasswordModule,
     CardModule,
     CheckboxModule,
-
     PasswordComponent,
   ],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css',
 })
 export class RegisterComponent {
   password: string = '';

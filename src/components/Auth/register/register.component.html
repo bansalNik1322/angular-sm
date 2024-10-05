@@ -1,0 +1,49 @@
+<div class="container mt-5 m-10 w-60">
+  <h2>Register</h2>
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        required
+        ngModel
+        name="username"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        required
+        ngModel
+        name="email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <app-password [(passwordValue)]="password"></app-password>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <app-password
+        [(passwordValue)]="confirmPassword"
+        [passwordOrConfirm]="true"
+      ></app-password>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+
+  <div class="mt-4">
+    <p>Or sign up with:</p>
+    <a href="#" class="btn btn-danger mr-2">Google</a>
+    <a href="#" class="btn btn-primary">Facebook</a>
+  </div>
+</div>
